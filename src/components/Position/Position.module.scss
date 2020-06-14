@@ -1,0 +1,69 @@
+.PositionFree{
+    background-color: #f3f3f3;
+    width: 23%;
+    height: 23%;
+    border: 1px solid #000;
+    position: absolute;
+    border-radius: 50%;
+    box-shadow: inset 3px 1px 7px #7c7c7c;
+    z-index: 2;
+}
+.PositionGoalBg{
+    background-color: red;
+}
+.PositionAvailableToMove{
+    background-color: #f3f3f3;
+    width: 23%;
+    height: 23%;
+    border: 1px solid #000;
+    position: absolute;
+    border-radius: 50%;
+    box-shadow: inset 0px 0px 11px #1b736e;;
+    z-index: 2;
+}
+
+.PositionHen{
+    background-color: #1b736e;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #000;
+    position: absolute;
+    border-radius: 50%;
+    z-index: 2;
+    cursor: pointer;
+    transform: scale(1.5); 
+}
+.PositionFox{
+    background-color: #710707;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #000;
+    position: absolute;
+    border-radius: 50%;
+    z-index: 2;    
+    transform: scale(1.5); 
+    cursor: pointer;
+}
+.Selected{
+    transform: scale(1.8); 
+}
+
+.CornerTopLeft{
+    top: -13%;
+    left: -13%;
+}
+
+.CornerTopRight{
+    top: -13%;
+    right: -13%;
+}
+
+.CornerBottomLeft{
+    bottom: -13%;
+    left: -13%;
+}
+
+.CornerBottomRight{
+    bottom: -13%;
+    right: -13%;
+}

@@ -1,0 +1,25 @@
+.Board{
+    background-color: #ffffff;
+    max-width: 95vh !important;
+    max-height: 95vh !important;
+    width: 95vw !important;
+    height: 95vw !important;
+    padding: 25px;
+    border-radius: 2px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.Base{
+    position: relative;
+    background-color: #ffffff;
+    height: 100vh;
+}
+.Row {
+    width: 100% !important;
+    height: 16.66666666666667%;
+}
+
+@media (max-width: 700px) {
+    .Board {
+        height: 95vw !important;
+    }
+}

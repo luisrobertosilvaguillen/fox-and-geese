@@ -1,0 +1,135 @@
+.DiagonalLeft {
+    width:50%;
+    height:100%;    
+    position:relative;
+}
+.DiagonalLeft:after {
+    content:"";
+    position:absolute;
+    border-top: 2px solid #000;
+    top: 0; 
+    left: 0; 
+    right: -41%;
+    transform: rotate(45deg);
+    transform-origin: 0 0;
+}
+.DiagonalRight {
+    width:50%;
+    height:100%;
+    position:relative;
+}
+.DiagonalRight:after {
+    content:"";
+    position:absolute;
+    border-top: 2px solid #000;
+    right: 0; 
+    left: -45%;
+    transform: rotate(-45deg);
+    transform-origin: 99% 0;
+}
+.BorderTop{
+    border-top: 2px solid #000;
+}
+.BorderBottom{
+    border-bottom: 2px solid #000;
+}
+.BorderLeft{
+    border-left: 2px solid #000;
+}
+.BorderRight{
+    border-right: 2px solid #000;
+}
+
+@media (max-width: 750px) {
+    .DiagonalLeft:after {
+        right: -42% !important;
+        transform: rotate(44.5deg) !important;
+    }
+    .DiagonalRight:after {
+        left: -44% !important;
+        transform: rotate(-45.6deg) !important;
+    }
+}
+@media (max-width: 730px) {
+    .DiagonalLeft:after {
+        right: -42% !important;
+        transform: rotate(45deg) !important;
+    }
+    .DiagonalRight:after {
+        left: -45% !important;
+        transform: rotate(-45.5deg) !important;
+    }
+}
+@media (max-width: 720px) {
+    .BorderTop{
+        border-top: 1px solid #000;
+    }
+    .BorderBottom{
+        border-bottom: 1px solid #000;
+    }
+    .BorderLeft{
+        border-left: 1px solid #000;
+    }
+    .BorderRight{
+        border-right: 1px solid #000;
+    }    
+    .DiagonalLeft:after {
+        right: -41% !important;
+        transform: rotate(46deg) !important;
+        border-top: 1px solid #000;
+    }
+    .DiagonalRight:after {
+        left: -45% !important;
+        transform: rotate(-45.3deg) !important;
+        border-top: 1px solid #000;
+    }
+}
+@media (max-width: 710px) {
+    .DiagonalRight:after {
+        left: -46% !important;
+        transform: rotate(-44.9deg) !important;
+    }
+}
+@media (max-width: 700px) {
+    .DiagonalRight:after {
+        left: -44% !important;
+        transform: rotate(-45.3deg) !important;
+    }
+}
+@media (max-width: 500px) {
+    .DiagonalRight:after {
+        left: -47% !important;
+        transform: rotate(-45.9deg) !important;
+    }
+}
+@media (max-width: 300px) {
+    .DiagonalLeft:after {
+        right: -44% !important;
+    }
+    .DiagonalRight:after {
+        left: -51% !important;
+        transform: rotate(-46.3deg) !important;
+    }
+}
+@media (max-width: 230px) {
+    .DiagonalLeft:after {
+        right: -55% !important;
+        transform: rotate(47deg) !important;
+    }
+    .DiagonalRight:after {
+        left: -55% !important;
+        transform: rotate(-47deg) !important;
+    }
+}
+@media (max-width: 180px) {
+    .DiagonalLeft:after {
+        right: -58% !important;
+        transform: rotate(49deg) !important;
+    }
+    .DiagonalRight:after {
+        left: -62% !important;
+        transform: rotate(-46deg) !important;
+    }
+}
+
+

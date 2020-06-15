@@ -53,7 +53,7 @@ const Position = (props: Props) => {
     const onSelectPosition = useCallback(() => {
       if(turn === status && !selected && selectable)
         dispatch(actions.selectPosition(coordinates, status))
-    }, [turn, dispatch, coordinates, status, selected]);
+    }, [turn, dispatch, coordinates, status, selected, selectable]);
     
     const onSelectAvailablePosition = useCallback(() => {
       if([positionStatus.AvailableToMove, positionStatus.AvailableToEat].includes(status)) {

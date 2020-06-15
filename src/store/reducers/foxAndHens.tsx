@@ -95,12 +95,12 @@ const canFoxesMove = (updatedPositions: Position[], state: any): Boolean => {
     let totalPositionsAvailableToMove = 0;
     foxes.forEach((foxPosition) => {
         const positionAlternatives= foxPosition.getPositions(state.boardConfig, positionStatus.Fox);
-        totalPositionsAvailableToMove += state.positions.filter((position: Position) => {
+        const positionsAvailableToMove = updatedPositions.filter((position: Position) => {
             const {row: mapRow, position: mapPos } = position.coordinates;
             const isAnAlternativeToMove = positionAlternatives.find(
                 (posAltToMove) => (posAltToMove.toMove.row === mapRow && posAltToMove.toMove.position === mapPos)
             );
-            if(isAnAlternativeToMove && position.status !== positionStatus.Hen) 
+            if(isAnAlternativeToMove && position.status !== positionStatus.Hen && position.status !== positionStatus.Fox) 
                 return true;
 
             const isAnAlternativeToEat = positionAlternatives.find(
@@ -109,7 +109,7 @@ const canFoxesMove = (updatedPositions: Position[], state: any): Boolean => {
             );
     
             if(isAnAlternativeToEat) {
-                const positionToBeEated: Position = state.positions.find(
+                const positionToBeEated: Position = updatedPositions.find(
                     (pos: Position) => (pos.itsSamePosition(isAnAlternativeToEat.toMove))
                 );
     
@@ -117,7 +117,8 @@ const canFoxesMove = (updatedPositions: Position[], state: any): Boolean => {
                     return true;
             }
             return false;
-        }).length;
+        });
+        totalPositionsAvailableToMove += positionsAvailableToMove.length;
     });
 
     return totalPositionsAvailableToMove > 0;
@@ -230,7 +231,7 @@ const moveToAvailabletPosition = (state: any, action: any) => {
 
         return new Position({row: mapRow, position: mapPos}, status, false, selectable, isGoalPosition);
     });
-
+    
     if(hensInHouse === 9) {
         console.log(5, "DAR MENSAJE QUE GANARON LAS GALLINAS - LLEGARON AL GALLINERO");
     }

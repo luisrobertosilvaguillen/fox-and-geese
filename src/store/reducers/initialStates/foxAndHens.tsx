@@ -292,8 +292,7 @@ const opponents = {
             coordinates[5],
             coordinates[8],
             coordinates[9],
-            coordinates[10],
-
+            coordinates[10]
         ]
     },
     foxes: {

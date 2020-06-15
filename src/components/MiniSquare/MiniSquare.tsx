@@ -48,4 +48,4 @@ const MiniSquare = (props:Props) => {
     )
 }
 
-export default MiniSquare;
+export default React.memo(MiniSquare);

@@ -15,4 +15,4 @@ const GameRoom = props => {
            </div>
 }
 
-export default GameRoom;
+export default React.memo(GameRoom);

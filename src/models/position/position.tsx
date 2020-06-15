@@ -155,7 +155,6 @@ export default class Position {
     calcPositionAlternativesToEat(boardConfig: BoardConfig, coordinates: PositionCoordinates,
         coordinatesToMove: PositionCoordinates): PositionCoordinates {
 
-        const positionsToEat: PositionCoordinates[] = [];
         const movementOptions= [this.calcPositionPerspective(boardConfig, coordinates, coordinatesToMove)];
         const coordinatesToEat: PositionCoordinates[] = this.calcPositionCoordinates(boardConfig, 
             coordinatesToMove, movementOptions);
